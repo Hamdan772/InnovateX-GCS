@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Shield } from "lucide-react"
-import Link from "next/link"
+import { Menu, X } from "lucide-react"
 import Logo from "./logo"
 
 export default function Navbar() {
@@ -68,19 +67,6 @@ export default function Navbar() {
                 {link.name}
               </button>
             ))}
-            
-            {/* Code of Conduct Button */}
-            <Link
-              href="/code-of-conduct"
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all hover:scale-105 transform ${
-                isScrolled
-                  ? "bg-purple-600 hover:bg-purple-700 text-white"
-                  : "bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground backdrop-blur-sm"
-              }`}
-            >
-              <Shield className="w-4 h-4" />
-              Code of Conduct
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -129,21 +115,6 @@ export default function Navbar() {
                   {link.name}
                 </button>
               ))}
-              
-              {/* Mobile Code of Conduct Button */}
-              <Link
-                href="/code-of-conduct"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 animate-slide-up ${
-                  isScrolled
-                    ? "bg-purple-600 hover:bg-purple-700 text-white"
-                    : "bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground"
-                }`}
-                style={{ animationDelay: `${navLinks.length * 50}ms` }}
-              >
-                <Shield className="w-4 h-4" />
-                Code of Conduct
-              </Link>
             </div>
           </div>
         )}

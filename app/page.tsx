@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import {
   Calendar,
   Clock,
@@ -686,6 +687,25 @@ export default function Home() {
               </p>
             </CardContent>
           </Card>
+
+          {/* Code of Conduct Button */}
+          <div className="mt-12 text-center">
+            <Link href="/code-of-conduct">
+              <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10 hover:border-primary transition-all cursor-pointer group">
+                <CardContent className="p-8">
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Shield className="w-7 h-7 text-primary" />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-2xl font-black mb-1">Event Rules & Code of Conduct</h4>
+                      <p className="text-muted-foreground">Learn about expectations, safety, and fair play guidelines</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
         </div>
       </section>
 
